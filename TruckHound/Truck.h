@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "TruckSchedule.h"
 
 @interface Truck : NSObject
+
+@property (nonatomic) NSString *truckName;
+@property (nonatomic) NSString *truckBlurb;
+@property (nonatomic) UIImage *truckMenu;
+@property (nonatomic) TruckSchedule *truckSchedule;
+
+-(Truck *)initTruck: (NSString *)truckName : (NSString *)truckBlurb : (UIImage*)truckMenu : (TruckSchedule *)truckSchedule;
 
 @end

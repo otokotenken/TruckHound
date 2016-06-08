@@ -16,6 +16,8 @@
 		43DFA9141D089D0C0088BAC2 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA9131D089D0C0088BAC2 /* AboutViewController.m */; };
 		43DFA9171D089D5E0088BAC2 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA9161D089D5E0088BAC2 /* MenuViewController.m */; };
 		43DFA91A1D089D900088BAC2 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA9191D089D900088BAC2 /* ScheduleViewController.m */; };
+		87389CBC1D08A92C0048FEA5 /* Truck.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CBB1D08A92C0048FEA5 /* Truck.m */; };
+		87389CBF1D08AD320048FEA5 /* TruckSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CBE1D08AD320048FEA5 /* TruckSchedule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		43DFA9161D089D5E0088BAC2 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		43DFA9181D089D900088BAC2 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		43DFA9191D089D900088BAC2 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		87389CBA1D08A92C0048FEA5 /* Truck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Truck.h; sourceTree = "<group>"; };
+		87389CBB1D08A92C0048FEA5 /* Truck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Truck.m; sourceTree = "<group>"; };
+		87389CBD1D08AD320048FEA5 /* TruckSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TruckSchedule.h; sourceTree = "<group>"; };
+		87389CBE1D08AD320048FEA5 /* TruckSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TruckSchedule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 				43DFA9011D089A470088BAC2 /* Main.storyboard */,
 				43DFA90F1D089CAC0088BAC2 /* ListTVC.h */,
 				43DFA9101D089CAC0088BAC2 /* ListTVC.m */,
+				87389CC01D08AF480048FEA5 /* Classes */,
 				43DFA9181D089D900088BAC2 /* ScheduleViewController.h */,
 				43DFA9191D089D900088BAC2 /* ScheduleViewController.m */,
 				43DFA9151D089D5E0088BAC2 /* MenuViewController.h */,
@@ -92,6 +99,17 @@
 				43DFA8F91D089A470088BAC2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87389CC01D08AF480048FEA5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				87389CBA1D08A92C0048FEA5 /* Truck.h */,
+				87389CBD1D08AD320048FEA5 /* TruckSchedule.h */,
+				87389CBE1D08AD320048FEA5 /* TruckSchedule.m */,
+				87389CBB1D08A92C0048FEA5 /* Truck.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87389CBF1D08AD320048FEA5 /* TruckSchedule.m in Sources */,
 				43DFA9111D089CAC0088BAC2 /* ListTVC.m in Sources */,
+				87389CBC1D08A92C0048FEA5 /* Truck.m in Sources */,
 				43DFA91A1D089D900088BAC2 /* ScheduleViewController.m in Sources */,
 				43DFA8FD1D089A470088BAC2 /* AppDelegate.m in Sources */,
 				43DFA9141D089D0C0088BAC2 /* AboutViewController.m in Sources */,
@@ -318,6 +338,7 @@
 				43DFA90E1D089A470088BAC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
