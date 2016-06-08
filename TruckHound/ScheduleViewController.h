@@ -10,4 +10,7 @@
 
 @interface ScheduleViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *scheduleDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *scheduleTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *scheduleLocationLabel;
 @end
