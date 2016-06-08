@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="-18"/>
         </scene>
-        <!--Item 2-->
+        <!--Menu-->
         <scene sceneID="kMA-Fw-OZK">
             <objects>
-                <viewController id="FXs-Qw-RL7" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Menu" title="Menu" id="FXs-Qw-RL7" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u8A-8s-ANu"/>
                         <viewControllerLayoutGuide type="bottom" id="RVj-yq-ueK"/>
@@ -48,6 +48,11 @@
                     <view key="view" contentMode="scaleToFill" id="39v-1E-gDp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gda-iT-Woe">
+                                <rect key="frame" x="40" y="79" width="240" height="419"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="IXK-z0-wxU"/>
@@ -56,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1692" y="296"/>
         </scene>
-        <!--Item-->
+        <!--Schedule-->
         <scene sceneID="Vwa-5G-ExF">
             <objects>
-                <viewController id="Mkr-md-phe" customClass="ScheduleViewController" sceneMemberID="viewController">
+                <viewController title="Schedule" id="Mkr-md-phe" customClass="ScheduleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aOt-MQ-Plu"/>
                         <viewControllerLayoutGuide type="bottom" id="zgV-nj-hHQ"/>
@@ -67,18 +72,43 @@
                     <view key="view" contentMode="scaleToFill" id="Bvf-YE-dIg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIa-o5-D89">
+                                <rect key="frame" x="119" y="97" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgV-t4-LVn">
+                                <rect key="frame" x="119" y="149" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szm-jW-jLm">
+                                <rect key="frame" x="57" y="220" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dsk-C3-BAh"/>
+                    <connections>
+                        <outlet property="scheduleDateLabel" destination="zIa-o5-D89" id="dIf-sz-34p"/>
+                        <outlet property="scheduleLocationLabel" destination="Szm-jW-jLm" id="tAF-14-zbd"/>
+                        <outlet property="scheduleTimeLabel" destination="zgV-t4-LVn" id="iCI-SB-hoR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eij-HO-BHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="796" y="-645"/>
         </scene>
-        <!--Item 1-->
+        <!--About-->
         <scene sceneID="ofX-Vy-qKN">
             <objects>
-                <viewController id="uAc-DT-6uA" customClass="AboutViewController" sceneMemberID="viewController">
+                <viewController title="About" id="uAc-DT-6uA" customClass="AboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V4m-e1-eGv"/>
                         <viewControllerLayoutGuide type="bottom" id="5uc-YO-l6U"/>
@@ -86,9 +116,27 @@
                     <view key="view" contentMode="scaleToFill" id="Ts1-BN-iF1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usf-jp-U2b">
+                                <rect key="frame" x="139" y="119" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhh-Zl-W5t">
+                                <rect key="frame" x="35" y="229" width="250" height="139"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="BSf-zo-LgK"/>
+                    <connections>
+                        <outlet property="aboutBlurbLabel" destination="Xhh-Zl-W5t" id="GOL-yQ-uJp"/>
+                        <outlet property="aboutTitleLabel" destination="usf-jp-U2b" id="fRd-MV-FW8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTk-Oe-H2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
