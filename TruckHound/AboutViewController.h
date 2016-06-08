@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AboutViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *aboutTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *aboutBlurbLabel;
 
 @end
