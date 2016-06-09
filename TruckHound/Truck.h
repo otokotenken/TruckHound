@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "TruckSchedule.h"
+#import "TruckThing.h"
 
 @interface Truck : NSObject
 

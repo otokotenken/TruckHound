@@ -10,8 +10,8 @@
 
 @interface TruckSchedule : NSObject
 
-@property (nonatomic) NSDate* scheduleStartTime;
-@property (nonatomic) NSDate* scheduleEndTime;
-@property (nonatomic) NSString* scheduleLocation;
+@property (nonatomic) NSDate *scheduleStartTime;
+@property (nonatomic) NSDate *scheduleEndTime;
+@property (nonatomic) NSString *scheduleLocation;
 
 @end
