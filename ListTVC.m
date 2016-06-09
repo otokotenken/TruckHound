@@ -8,6 +8,8 @@
 
 #import "ListTVC.h"
 #import "AboutViewController.h"
+#import "ScheduleViewController.h"
+#import "MenuViewController.h"
 
 @interface ListTVC ()
 
@@ -19,7 +21,6 @@ NSArray *truckArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -30,20 +31,20 @@ NSArray *truckArray;
 //    chores = @();
 //    -(Truck *)initTruck: (NSString *)truckName : (NSString *)truckBlurb : (UIImage*)truckMenu : (TruckSchedule *)truckSchedule;
     
-    Truck *truck1 = [[Truck alloc]initTruck: @"Mac Shack" : @"We are a Detroit based food truck specializing in creative Mac n Cheese & French Fries." : [UIImage imageNamed:@""] :];
-    
-    Truck *truck2 = [[Truck alloc]initTruck:@"Drifter Coffee" :@"We're a mobile coffee shop in Southeast Michigan. From the tiny door of our vintage Serro Scotty trailer to yours, we're serving up quality local coffee and caffeinating the masses." : [UIImage imageNamed: @"DrifterCoffeeMenu.png"] : ];
-    
-    Truck *truck3 = [[Chore alloc]initChore:@"clean room" :@"change sheets, make bed, vacuum, put away clothes and bring laundry downstairs" :FALSE];
-    
-    truckArray = [[NSArray alloc]initWithObjects: truck1,truck2, truck3, nil];
-    
+//    Truck *truck1 = [[Truck alloc]initTruck: @"Mac Shack" : @"We are a Detroit based food truck specializing in creative Mac n Cheese & French Fries." : [UIImage imageNamed:@""] :];
+//    
+//    Truck *truck2 = [[Truck alloc]initTruck:@"Drifter Coffee" :@"We're a mobile coffee shop in Southeast Michigan. From the tiny door of our vintage Serro Scotty trailer to yours, we're serving up quality local coffee and caffeinating the masses." : [UIImage imageNamed: @"DrifterCoffeeMenu.png"] : ];
+//    
+//    Truck *truck3 = [[Chore alloc]initChore:@"clean room" :@"change sheets, make bed, vacuum, put away clothes and bring laundry downstairs" :FALSE];
+//    
+//    truckArray = [[NSArray alloc]initWithObjects: truck1,truck2, truck3, nil];
+//    
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [self.tableView reloadData];
-}
+//- (void)viewDidAppear:(BOOL)animated
+//{
+//    [self.tableView reloadData];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -118,18 +119,21 @@ NSArray *truckArray;
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    NSLog(@"%ld",(long)indexPath.row);
-    DetailVC *detailVC = segue.destinationViewController;
-    
-    Chore *choreToPass = choreArray[indexPath.row];
-    detailVC.chorePassed = choreToPass;
+    if ([segue.identifier isEqualToString:@"ScheduleSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ScheduleViewController *destViewController = segue.destinationViewController;
+        destViewController.truckPassedSchedule = [truckArray objectAtIndex:indexPath.row];
+        
+    } else if ([segue.identifier isEqualToString:@"MenuSegue"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        MenuViewController *destViewController = segue.destinationViewController;
+        destViewController.truckPassedMenu = [truckArray objectAtIndex:indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"AboutSegue"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        AboutViewController *destViewController = segue.destinationViewController;
+        destViewController.truckPassedAbout = [truckArray objectAtIndex:indexPath.row];
+    }
 }
-
 
 @end

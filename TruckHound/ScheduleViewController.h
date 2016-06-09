@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Truck.h"
 
 @interface ScheduleViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *scheduleDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scheduleTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scheduleLocationLabel;
+
+@property Truck *truckPassedSchedule;
+
 @end

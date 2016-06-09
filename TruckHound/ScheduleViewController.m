@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    _scheduleDateLabel.text = _dateText;
+//    _scheduleTimeLabel.text = _scheduleText;
+//    _scheduleLocationLabel.text = _locationText;
+    
+    
     // Do any additional setup after loading the view.
 }
 

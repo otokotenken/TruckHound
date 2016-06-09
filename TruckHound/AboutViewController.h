@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Truck.h"
 
 @interface AboutViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *aboutTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *aboutBlurbLabel;
+
+@property Truck *truckPassedAbout;
 
 @end
