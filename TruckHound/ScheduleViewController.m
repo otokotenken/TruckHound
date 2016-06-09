@@ -16,10 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    _scheduleDateLabel.text = _dateText;
-//    _scheduleTimeLabel.text = _scheduleText;
-//    _scheduleLocationLabel.text = _locationText;
     
+    [self displayTruckDetails];
     
     // Do any additional setup after loading the view.
 }
@@ -27,6 +25,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)displayTruckDetails {
+//    _aboutTitleLabel.text = _truckPassedAbout.truckName;
+//    _aboutBlurbLabel.text = _truckPassedAbout.truckBlurb;
+//    
+//    @property (weak, nonatomic) IBOutlet UILabel *scheduleDateLabel;
+//    @property (weak, nonatomic) IBOutlet UILabel *scheduleTimeLabel;
+//    @property (weak, nonatomic) IBOutlet UILabel *scheduleLocationLabel;
+//    
+//    @property Truck *truckPassedSchedule;
 }
 
 /*

@@ -17,11 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self displayMenuDetails];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)displayMenuDetails {
+    _menuImage.image = _truckPassedMenu.truckMenu;
 }
 
 /*
