@@ -25,13 +25,14 @@ NSArray *truckArray;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    //[[chores alloc]init];
-    //[chores initWithObjects: @"chore 1", @"chore 2", @"chore 3" nil];
-    //chores = @();
+    [[Truck alloc]init];
+//    [Truck initWithObjects: @"chore 1", @"chore 2", @"chore 3" nil];
+//    chores = @();
+//    -(Truck *)initTruck: (NSString *)truckName : (NSString *)truckBlurb : (UIImage*)truckMenu : (TruckSchedule *)truckSchedule;
     
-    Truck *truck1 = [[Chore alloc]initChore:@"take out trash" :@"collect from all recepticles in the house and take to curb" :FALSE];
+    Truck *truck1 = [[Truck alloc]initTruck: @"Mac Shack" : @"We are a Detroit based food truck specializing in creative Mac n Cheese & French Fries." : [UIImage imageNamed:@""] :];
     
-    Truck *truck2 = [[Chore alloc]initChore:@"cut grass" :@"mow, collect clippings and weed-whip" :FALSE];
+    Truck *truck2 = [[Truck alloc]initTruck:@"Drifter Coffee" :@"We're a mobile coffee shop in Southeast Michigan. From the tiny door of our vintage Serro Scotty trailer to yours, we're serving up quality local coffee and caffeinating the masses." : [UIImage imageNamed: @"DrifterCoffeeMenu.png"] : ];
     
     Truck *truck3 = [[Chore alloc]initChore:@"clean room" :@"change sheets, make bed, vacuum, put away clothes and bring laundry downstairs" :FALSE];
     
@@ -56,18 +57,17 @@ NSArray *truckArray;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return choreArray.count;
+    return truckArray.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     int i = indexPath.row;
     
-    Chore *currentChore = choreArray[i];
+    Truck *currentTruck = truckArray[i];
     
-    NSString *nameString = currentChore.name;
+    NSString *nameString = currentTruck.truckName;
     
     // Configure the cell...
     
@@ -75,11 +75,11 @@ NSArray *truckArray;
     cell.textLabel.text = nameString;
     return cell;
 }
-
-- (IBAction)myUnwindAction:(UIStoryboardSegue*)unwindSegue
-{
-    NSLog(@"unwind is being called!");
-}
+//
+//- (IBAction)myUnwindAction:(UIStoryboardSegue*)unwindSegue
+//{
+//    NSLog(@"unwind is being called!");
+//}
 
 /*
  // Override to support conditional editing of the table view.
@@ -131,7 +131,5 @@ NSArray *truckArray;
     detailVC.chorePassed = choreToPass;
 }
 
-
-@end
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Truck.h"
 
 @interface ListTVC : UITableViewController
 
