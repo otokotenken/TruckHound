@@ -16,6 +16,8 @@
 		43DFA9141D089D0C0088BAC2 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA9131D089D0C0088BAC2 /* AboutViewController.m */; };
 		43DFA9171D089D5E0088BAC2 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA9161D089D5E0088BAC2 /* MenuViewController.m */; };
 		43DFA91A1D089D900088BAC2 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA9191D089D900088BAC2 /* ScheduleViewController.m */; };
+		43DFA91C1D08EB640088BAC2 /* MacShack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43DFA91B1D08EB640088BAC2 /* MacShack.jpg */; };
+		43DFA91E1D08EF360088BAC2 /* DrifterCoffeeMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DFA91D1D08EF360088BAC2 /* DrifterCoffeeMenu.png */; };
 		87389CBC1D08A92C0048FEA5 /* Truck.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CBB1D08A92C0048FEA5 /* Truck.m */; };
 		87389CBF1D08AD320048FEA5 /* TruckSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CBE1D08AD320048FEA5 /* TruckSchedule.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,8 @@
 		43DFA9161D089D5E0088BAC2 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		43DFA9181D089D900088BAC2 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		43DFA9191D089D900088BAC2 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		43DFA91B1D08EB640088BAC2 /* MacShack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MacShack.jpg; path = ../../../../Downloads/MacShack.jpg; sourceTree = "<group>"; };
+		43DFA91D1D08EF360088BAC2 /* DrifterCoffeeMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DrifterCoffeeMenu.png; path = ../../../DrifterCoffeeMenu.png; sourceTree = "<group>"; };
 		87389CBA1D08A92C0048FEA5 /* Truck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Truck.h; sourceTree = "<group>"; };
 		87389CBB1D08A92C0048FEA5 /* Truck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Truck.m; sourceTree = "<group>"; };
 		87389CBD1D08AD320048FEA5 /* TruckSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TruckSchedule.h; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				43DFA9011D089A470088BAC2 /* Main.storyboard */,
 				43DFA90F1D089CAC0088BAC2 /* ListTVC.h */,
 				43DFA9101D089CAC0088BAC2 /* ListTVC.m */,
+				43DFA91D1D08EF360088BAC2 /* DrifterCoffeeMenu.png */,
 				87389CC01D08AF480048FEA5 /* Classes */,
 				43DFA9181D089D900088BAC2 /* ScheduleViewController.h */,
 				43DFA9191D089D900088BAC2 /* ScheduleViewController.m */,
@@ -86,6 +91,7 @@
 				43DFA9121D089D0C0088BAC2 /* AboutViewController.h */,
 				43DFA9131D089D0C0088BAC2 /* AboutViewController.m */,
 				43DFA9041D089A470088BAC2 /* Assets.xcassets */,
+				43DFA91B1D08EB640088BAC2 /* MacShack.jpg */,
 				43DFA9061D089A470088BAC2 /* LaunchScreen.storyboard */,
 				43DFA9091D089A470088BAC2 /* Info.plist */,
 				43DFA8F81D089A470088BAC2 /* Supporting Files */,
@@ -171,7 +177,9 @@
 			files = (
 				43DFA9081D089A470088BAC2 /* LaunchScreen.storyboard in Resources */,
 				43DFA9051D089A470088BAC2 /* Assets.xcassets in Resources */,
+				43DFA91C1D08EB640088BAC2 /* MacShack.jpg in Resources */,
 				43DFA9031D089A470088BAC2 /* Main.storyboard in Resources */,
+				43DFA91E1D08EF360088BAC2 /* DrifterCoffeeMenu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
