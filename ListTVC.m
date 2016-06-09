@@ -19,6 +19,7 @@
 @implementation ListTVC
 
 NSArray *truckArray;
+NSArray *truckSearchResults;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +28,7 @@ NSArray *truckArray;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [[Truck alloc]init];
+//    [[Truck alloc]init];
 //    [Truck initWithObjects: @"chore 1", @"chore 2", @"chore 3" nil];
 //    chores = @();
 //    -(Truck *)initTruck: (NSString *)truckName : (NSString *)truckBlurb : (UIImage*)truckMenu : (TruckSchedule *)truckSchedule;
@@ -137,7 +138,14 @@ NSArray *truckArray;
  return YES;
  }
  */
-
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF contains[cd] %@",
+                                    searchText];
+    
+    truckSearchResults = [truckArray filteredArrayUsingPredicate:resultPredicate];
+}
 
 #pragma mark - Navigation
 
