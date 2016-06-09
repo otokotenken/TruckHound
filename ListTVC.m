@@ -8,6 +8,7 @@
 
 #import "ListTVC.h"
 #import "AboutViewController.h"
+#import "Truck.h"
 
 @interface ListTVC ()
 
@@ -30,13 +31,34 @@ NSArray *truckArray;
 //    chores = @();
 //    -(Truck *)initTruck: (NSString *)truckName : (NSString *)truckBlurb : (UIImage*)truckMenu : (TruckSchedule *)truckSchedule;
     
-    Truck *truck1 = [[Truck alloc]initTruck: @"Mac Shack" : @"We are a Detroit based food truck specializing in creative Mac n Cheese & French Fries." : [UIImage imageNamed:@""] :];
     
-    Truck *truck2 = [[Truck alloc]initTruck:@"Drifter Coffee" :@"We're a mobile coffee shop in Southeast Michigan. From the tiny door of our vintage Serro Scotty trailer to yours, we're serving up quality local coffee and caffeinating the masses." : [UIImage imageNamed: @"DrifterCoffeeMenu.png"] : ];
+//    self.truckName = truckName;
+//    self.truckBlurb = truckBlurb;
+//    self.truckMenu = truckMenu;
     
-    Truck *truck3 = [[Chore alloc]initChore:@"clean room" :@"change sheets, make bed, vacuum, put away clothes and bring laundry downstairs" :FALSE];
+//    self.truckSchedule = truckSchedule;
+//    @property (nonatomic) NSDate *scheduleStartTime;
+//    @property (nonatomic) NSDate *scheduleEndTime;
+//    @property (nonatomic) NSString *scheduleLocation;
+
+//    return self;
+
+    TruckSchedule *truckSchedule1;
+    TruckSchedule *truckSchedule2;
     
-    truckArray = [[NSArray alloc]initWithObjects: truck1,truck2, truck3, nil];
+    truckSchedule1.scheduleStartTime = [NSDate date];
+    truckSchedule1.scheduleEndTime = [NSDate date];
+    truckSchedule1.scheduleLocation = @"29749 East River Road, Grosse Ile, MI 48138";
+    
+    truckSchedule2.scheduleStartTime = [NSDate date];
+    truckSchedule2.scheduleEndTime = [NSDate date];
+    truckSchedule2.scheduleLocation = @"22540 East River Road, Grosse Ile, MI 48138";
+    
+    Truck *truck1 = [[Truck alloc]initTruck: @"Mac Shack" : @"We are a Detroit based food truck specializing in creative Mac n Cheese & French Fries." : [UIImage imageNamed:@"MacShack.jpg"] : truckSchedule1];
+    
+    Truck *truck2 = [[Truck alloc]initTruck:@"Drifter Coffee" :@"We're a mobile coffee shop in Southeast Michigan. From the tiny door of our vintage Serro Scotty trailer to yours, we're serving up quality local coffee and caffeinating the masses." : [UIImage imageNamed: @"DrifterCoffeeMenu.png"] : truckSchedule2];
+    
+    truckArray = [[NSArray alloc]initWithObjects: truck1,truck2, nil];
     
 }
 
@@ -125,10 +147,10 @@ NSArray *truckArray;
     
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     NSLog(@"%ld",(long)indexPath.row);
-    DetailVC *detailVC = segue.destinationViewController;
+    AboutViewController *aboutVC = segue.destinationViewController;
     
-    Chore *choreToPass = choreArray[indexPath.row];
-    detailVC.chorePassed = choreToPass;
+    Truck *truckToPass = truckArray[indexPath.row];
+    aboutVC.truckPassed = truckToPass;
 }
 
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Truck.h"
+#import "TruckSchedule.h"
 
 @interface ListTVC : UITableViewController
 
