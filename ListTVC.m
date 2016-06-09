@@ -56,9 +56,9 @@ NSArray *truckSearchResults;
     truckSchedule2.scheduleEndTime = [NSDate date];
     truckSchedule2.scheduleLocation = @"22540 East River Road, Grosse Ile, MI 48138";
     
-    Truck *truck1 = [[Truck alloc]initTruck: @"Mac Shack" : @"We are a Detroit based food truck specializing in creative Mac n Cheese & French Fries." : [UIImage imageNamed:@"MacShack.jpg"] : truckSchedule1];
+    Truck *truck1 = [[Truck alloc]initTruck: @"Mac Shack" : @"We are a Detroit based food truck specializing in creative Mac n Cheese & French Fries." : [UIImage imageNamed:@"1.JPG"] : truckSchedule1];
     
-    Truck *truck2 = [[Truck alloc]initTruck:@"Drifter Coffee" :@"We're a mobile coffee shop in Southeast Michigan. From the tiny door of our vintage Serro Scotty trailer to yours, we're serving up quality local coffee and caffeinating the masses." : [UIImage imageNamed: @"DrifterCoffeeMenu.png"] : truckSchedule2];
+    Truck *truck2 = [[Truck alloc]initTruck:@"Drifter Coffee" :@"We're a mobile coffee shop in Southeast Michigan. From the tiny door of our vintage Serro Scotty trailer to yours, we're serving up quality local coffee and caffeinating the masses." : [UIImage imageNamed: @"1.JPG"] : truckSchedule2];
     
     truckArray = [[NSArray alloc]initWithObjects: truck1,truck2, nil];
     
