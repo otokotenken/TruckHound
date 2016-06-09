@@ -17,11 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self displayTruckDetails];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)displayTruckDetails {
+    _aboutTitleLabel.text = _truckPassedAbout.truckName;
+    _aboutBlurbLabel.text = _truckPassedAbout.truckBlurb;
 }
 
 /*
