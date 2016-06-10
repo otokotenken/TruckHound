@@ -29,8 +29,8 @@
 
 - (void)displayDetails {
     SharedTruck *selectedTruck = [SharedTruck makeTruck];
-    _aboutTitleLabel.text = selectedTruck->truckName;
-    _aboutBlurbLabel.text = selectedTruck->truckBlurb;
+    _aboutTitleLabel.text = selectedTruck->initTruckWithName;
+    _aboutBlurbLabel.text = selectedTruck->andTruckBlurb;
 }
 
 - (void)viewDidAppear:(BOOL)animated

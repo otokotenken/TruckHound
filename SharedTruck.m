@@ -31,10 +31,10 @@ static SharedTruck *sharedTruck = nil;    // static instance variable
         truckSchedule1.scheduleEndTime = [NSDate date];
         truckSchedule1.scheduleLocation = @"bfe";
         
-        truckName = @"jeremy's truck";
-        truckBlurb = @"really, this is for me son";
-        //truckMenu = ;
-        truckSchedule = truckSchedule1;
+        initTruckWithName = @"jeremy's truck";
+        andTruckBlurb = @"really, this is for me son";
+        andTruckMenu = [UIImage imageNamed:@"1.jpg"];
+        andTruckSchedule = truckSchedule1;
     }
     return self;
 }

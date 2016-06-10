@@ -10,7 +10,7 @@
 
 @implementation Truck
 
--(Truck *)initTruck:(NSString *)truckName :(NSString *)truckBlurb :(UIImage *)truckMenu :(TruckSchedule *)truckSchedule
+-(Truck *)initTruckWithName:(NSString *)truckName andTruckBlurb:(NSString *)truckBlurb andTruckImage:(UIImage *)truckMenu andTruckSchedule:(TruckSchedule *)truckSchedule
 {
     self.truckName = truckName;
     self.truckBlurb = truckBlurb;
