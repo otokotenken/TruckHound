@@ -18,6 +18,6 @@
 @property (nonatomic) UIImage *truckMenu;
 @property (nonatomic) TruckSchedule *truckSchedule;
 
--(Truck *)initTruck: (NSString *)truckName : (NSString *)truckBlurb : (UIImage*)truckMenu : (TruckSchedule *)truckSchedule;
+-(Truck *)initTruckWithName:(NSString *)truckName andTruckBlurb:(NSString *)truckBlurb andTruckImage:(UIImage *)truckMenu andTruckSchedule:(TruckSchedule *)truckSchedule;
 
 @end

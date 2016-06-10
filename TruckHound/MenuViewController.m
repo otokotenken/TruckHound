@@ -6,6 +6,10 @@
 //  Copyright © 2016 DetroitLabs. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import "ListTVC.h"
+#import "Truck.h"
+#import "SharedTruck.h"
 #import "MenuViewController.h"
 
 @interface MenuViewController ()
@@ -17,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self displayDetails];
+    //[self displayDetails];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,9 +30,11 @@
 }
 
 - (void)displayDetails {
-   // NSLog(@"in Menu's displayDetails method");
-
-    _menuImage.image = _truckPassed.truckMenu;
+    // NSLog(@"in Menu's displayDetails method");
+    
+    SharedTruck *selectedTruck = [SharedTruck makeTruck];
+    NSLog(@"selectedTruck: %@", selectedTruck->andTruckMenu);
+    _menuImage.image = selectedTruck->andTruckMenu;
 }
 
 - (void)viewDidAppear:(BOOL)animated
