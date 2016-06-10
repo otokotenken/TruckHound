@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Truck.h"
 #import "SharedTruck.h"
+#import <MapKit/MapKit.h>
 
 @interface ScheduleViewController : UIViewController
 
@@ -17,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scheduleLocationLabel;
 
 @property Truck *truckPassed;
+
+@property (weak, nonatomic) IBOutlet MKMapView *theSpot;
 
 @end

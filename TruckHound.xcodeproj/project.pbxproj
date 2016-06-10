@@ -20,6 +20,7 @@
 		87389CBF1D08AD320048FEA5 /* TruckSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CBE1D08AD320048FEA5 /* TruckSchedule.m */; };
 		87389CC61D0A06800048FEA5 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CC51D0A06800048FEA5 /* TabViewController.m */; };
 		874945F61D0A5B40008A302B /* SharedTruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 874945F51D0A5B40008A302B /* SharedTruck.m */; };
+		874945F81D0B302E008A302B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874945F71D0B302E008A302B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		87389CC51D0A06800048FEA5 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		874945F41D0A5B40008A302B /* SharedTruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedTruck.h; path = ../SharedTruck.h; sourceTree = "<group>"; };
 		874945F51D0A5B40008A302B /* SharedTruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedTruck.m; path = ../SharedTruck.m; sourceTree = "<group>"; };
+		874945F71D0B302E008A302B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874945F81D0B302E008A302B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		43DFA8EC1D089A470088BAC2 = {
 			isa = PBXGroup;
 			children = (
+				874945F71D0B302E008A302B /* MapKit.framework */,
 				43A8D8771D08FB5600E1A3AC /* Assets.xcassets */,
 				43DFA8F71D089A470088BAC2 /* TruckHound */,
 				43DFA8F61D089A470088BAC2 /* Products */,
