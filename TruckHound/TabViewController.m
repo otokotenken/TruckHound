@@ -23,12 +23,11 @@ NSString *myMessage = @"jeremy's message";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-  //  NSLog(@"im in the tab controller and the truck name is %@", _truckPassed.truckName);
-    self.reloadInputViews;
+    //  NSLog(@"im in the tab controller and the truck name is %@", _truckPassed.truckName);
+    //self.reloadInputViews; // result unused, so I commented it
     //self.
     
 }
-
 
 -(void)reloadInputViews{
     NSLog(@"we're getting in to reloadInputViews...");

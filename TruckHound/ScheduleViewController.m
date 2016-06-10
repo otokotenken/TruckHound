@@ -40,15 +40,15 @@
         [dateFormatter setDateFormat:@"mm"];
         [dateFormatter setDateFormat:@"ss"];
     
-    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->truckSchedule.scheduleStartTime];
+    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->andTruckSchedule.scheduleStartTime];
     
-    NSString *endTime = [dateFormatter stringFromDate:selectedTruck->truckSchedule.scheduleEndTime];
+    NSString *endTime = [dateFormatter stringFromDate:selectedTruck->andTruckSchedule.scheduleEndTime];
     
     _scheduleStartTimeLabel.text = startTime;
     
     _scheduleEndTimeLabel.text = endTime;
     
-    _scheduleLocationLabel.text = selectedTruck->truckSchedule.scheduleLocation;
+    _scheduleLocationLabel.text = selectedTruck->andTruckSchedule.scheduleLocation;
 }
 
 - (void)viewDidAppear:(BOOL)animated
