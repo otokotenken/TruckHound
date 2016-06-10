@@ -18,6 +18,8 @@
 		43DFA91A1D089D900088BAC2 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA9191D089D900088BAC2 /* ScheduleViewController.m */; };
 		87389CBC1D08A92C0048FEA5 /* Truck.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CBB1D08A92C0048FEA5 /* Truck.m */; };
 		87389CBF1D08AD320048FEA5 /* TruckSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CBE1D08AD320048FEA5 /* TruckSchedule.m */; };
+		87389CC61D0A06800048FEA5 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87389CC51D0A06800048FEA5 /* TabViewController.m */; };
+		874945F61D0A5B40008A302B /* SharedTruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 874945F51D0A5B40008A302B /* SharedTruck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		87389CBB1D08A92C0048FEA5 /* Truck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Truck.m; sourceTree = "<group>"; };
 		87389CBD1D08AD320048FEA5 /* TruckSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TruckSchedule.h; sourceTree = "<group>"; };
 		87389CBE1D08AD320048FEA5 /* TruckSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TruckSchedule.m; sourceTree = "<group>"; };
+		87389CC41D0A06800048FEA5 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		87389CC51D0A06800048FEA5 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+		874945F41D0A5B40008A302B /* SharedTruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedTruck.h; path = ../SharedTruck.h; sourceTree = "<group>"; };
+		874945F51D0A5B40008A302B /* SharedTruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedTruck.m; path = ../SharedTruck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,21 +80,11 @@
 		43DFA8F71D089A470088BAC2 /* TruckHound */ = {
 			isa = PBXGroup;
 			children = (
-				43DFA8FB1D089A470088BAC2 /* AppDelegate.h */,
-				43DFA8FC1D089A470088BAC2 /* AppDelegate.m */,
 				43DFA9011D089A470088BAC2 /* Main.storyboard */,
-				43DFA90F1D089CAC0088BAC2 /* ListTVC.h */,
-				43DFA9101D089CAC0088BAC2 /* ListTVC.m */,
 				87389CC01D08AF480048FEA5 /* Classes */,
-				43DFA9181D089D900088BAC2 /* ScheduleViewController.h */,
-				43DFA9191D089D900088BAC2 /* ScheduleViewController.m */,
-				43DFA9151D089D5E0088BAC2 /* MenuViewController.h */,
-				43DFA9161D089D5E0088BAC2 /* MenuViewController.m */,
-				43DFA9121D089D0C0088BAC2 /* AboutViewController.h */,
-				43DFA9131D089D0C0088BAC2 /* AboutViewController.m */,
-				43DFA9061D089A470088BAC2 /* LaunchScreen.storyboard */,
-				43DFA9091D089A470088BAC2 /* Info.plist */,
+				87389CEE1D0A2B890048FEA5 /* View Controllers */,
 				43DFA8F81D089A470088BAC2 /* Supporting Files */,
+				87389CED1D0A2B570048FEA5 /* junk */,
 			);
 			path = TruckHound;
 			sourceTree = "<group>";
@@ -105,11 +101,49 @@
 			isa = PBXGroup;
 			children = (
 				87389CBA1D08A92C0048FEA5 /* Truck.h */,
+				87389CBB1D08A92C0048FEA5 /* Truck.m */,
 				87389CBD1D08AD320048FEA5 /* TruckSchedule.h */,
 				87389CBE1D08AD320048FEA5 /* TruckSchedule.m */,
-				87389CBB1D08A92C0048FEA5 /* Truck.m */,
+				874945F41D0A5B40008A302B /* SharedTruck.h */,
+				874945F51D0A5B40008A302B /* SharedTruck.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		87389CED1D0A2B570048FEA5 /* junk */ = {
+			isa = PBXGroup;
+			children = (
+				43DFA8FB1D089A470088BAC2 /* AppDelegate.h */,
+				43DFA8FC1D089A470088BAC2 /* AppDelegate.m */,
+				43DFA9061D089A470088BAC2 /* LaunchScreen.storyboard */,
+				43DFA9091D089A470088BAC2 /* Info.plist */,
+			);
+			name = junk;
+			sourceTree = "<group>";
+		};
+		87389CEE1D0A2B890048FEA5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87389CEF1D0A2C220048FEA5 /* Header Files */,
+				43DFA9101D089CAC0088BAC2 /* ListTVC.m */,
+				43DFA9131D089D0C0088BAC2 /* AboutViewController.m */,
+				43DFA9191D089D900088BAC2 /* ScheduleViewController.m */,
+				43DFA9161D089D5E0088BAC2 /* MenuViewController.m */,
+				87389CC51D0A06800048FEA5 /* TabViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		87389CEF1D0A2C220048FEA5 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				43DFA90F1D089CAC0088BAC2 /* ListTVC.h */,
+				43DFA9121D089D0C0088BAC2 /* AboutViewController.h */,
+				43DFA9181D089D900088BAC2 /* ScheduleViewController.h */,
+				43DFA9151D089D5E0088BAC2 /* MenuViewController.h */,
+				87389CC41D0A06800048FEA5 /* TabViewController.h */,
+			);
+			name = "Header Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874945F61D0A5B40008A302B /* SharedTruck.m in Sources */,
 				87389CBF1D08AD320048FEA5 /* TruckSchedule.m in Sources */,
 				43DFA9111D089CAC0088BAC2 /* ListTVC.m in Sources */,
 				87389CBC1D08A92C0048FEA5 /* Truck.m in Sources */,
+				87389CC61D0A06800048FEA5 /* TabViewController.m in Sources */,
 				43DFA91A1D089D900088BAC2 /* ScheduleViewController.m in Sources */,
 				43DFA8FD1D089A470088BAC2 /* AppDelegate.m in Sources */,
 				43DFA9141D089D0C0088BAC2 /* AboutViewController.m in Sources */,

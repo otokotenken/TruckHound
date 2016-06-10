@@ -1,8 +1,8 @@
 //
-//  ListTVC.h
+//  TabViewController.h
 //  TruckHound
 //
-//  Created by DetroitLabs on 6/8/16.
+//  Created by Jeremy Lilje on 6/9/16.
 //  Copyright © 2016 DetroitLabs. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 #import "Truck.h"
 #import "SharedTruck.h"
 
-@interface ListTVC : UITableViewController
+@interface TabViewController : UITableViewController
 
 @end

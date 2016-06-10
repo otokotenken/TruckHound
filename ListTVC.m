@@ -7,10 +7,9 @@
 //
 
 #import "ListTVC.h"
-#import "AboutViewController.h"
-#import "ScheduleViewController.h"
-#import "MenuViewController.h"
 #import "Truck.h"
+#import "SharedTruck.h"
+#import "AboutViewController.h"
 
 @interface ListTVC ()
 
@@ -23,45 +22,32 @@ NSArray *truckSearchResults;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    [[Truck alloc]init];
-//    [Truck initWithObjects: @"chore 1", @"chore 2", @"chore 3" nil];
-//    chores = @();
-//    -(Truck *)initTruck: (NSString *)truckName : (NSString *)truckBlurb : (UIImage*)truckMenu : (TruckSchedule *)truckSchedule;
     
-    
-//    self.truckName = truckName;
-//    self.truckBlurb = truckBlurb;
-//    self.truckMenu = truckMenu;
-    
-//    self.truckSchedule = truckSchedule;
-//    @property (nonatomic) NSDate *scheduleStartTime;
-//    @property (nonatomic) NSDate *scheduleEndTime;
-//    @property (nonatomic) NSString *scheduleLocation;
+    [self initializeTrucks];
+}
 
-//    return self;
-
-    TruckSchedule *truckSchedule1;
-    TruckSchedule *truckSchedule2;
-    
+-(void)initializeTrucks
+{
+    TruckSchedule *truckSchedule1 = [[TruckSchedule alloc] init];;
     truckSchedule1.scheduleStartTime = [NSDate date];
     truckSchedule1.scheduleEndTime = [NSDate date];
     truckSchedule1.scheduleLocation = @"29749 East River Road, Grosse Ile, MI 48138";
     
+    TruckSchedule *truckSchedule2 = [[TruckSchedule alloc] init];;
     truckSchedule2.scheduleStartTime = [NSDate date];
     truckSchedule2.scheduleEndTime = [NSDate date];
     truckSchedule2.scheduleLocation = @"22540 East River Road, Grosse Ile, MI 48138";
     
     Truck *truck1 = [[Truck alloc]initTruck: @"Mac Shack" : @"We are a Detroit based food truck specializing in creative Mac n Cheese & French Fries." : [UIImage imageNamed:@"1.JPG"] : truckSchedule1];
-    
     Truck *truck2 = [[Truck alloc]initTruck:@"Drifter Coffee" :@"We're a mobile coffee shop in Southeast Michigan. From the tiny door of our vintage Serro Scotty trailer to yours, we're serving up quality local coffee and caffeinating the masses." : [UIImage imageNamed: @"1.JPG"] : truckSchedule2];
     
     truckArray = [[NSArray alloc]initWithObjects: truck1,truck2, nil];
-    
 }
 
 //- (void)viewDidAppear:(BOOL)animated
@@ -85,7 +71,7 @@ NSArray *truckSearchResults;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellJL" forIndexPath:indexPath];
     
     int i = indexPath.row;
     
@@ -94,8 +80,6 @@ NSArray *truckSearchResults;
     NSString *nameString = currentTruck.truckName;
     
     // Configure the cell...
-    
-    //NSLog(@"current name is %@", nameString);
     cell.textLabel.text = nameString;
     return cell;
 }
@@ -138,43 +122,57 @@ NSArray *truckSearchResults;
  return YES;
  }
  */
--(BOOL)searchDisplayController:(UISearchController *)controller
-shouldReloadTableForSearchString:(NSString *)searchString
-{
-    [self filterContentForSearchText:searchString
-                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                                      objectAtIndex:[self.searchDisplayController.searchBar
-                                                     selectedScopeButtonIndex]]];
-    
-    return YES;
-}
+//-(BOOL)searchDisplayController:(UISearchController *)controller
+//shouldReloadTableForSearchString:(NSString *)searchString
+//{
+//    [self filterContentForSearchText:searchString
+//                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+//                                      objectAtIndex:[self.searchDisplayController.searchBar
+//                                                     selectedScopeButtonIndex]]];
+//    
+//    return YES;
+//}
+//
+//- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+//{
+//    NSPredicate *resultPredicate = [NSPredicate
+//                                    predicateWithFormat:@"SELF contains[cd] %@",
+//                                    searchText];
+//    
+//    truckSearchResults = [truckArray filteredArrayUsingPredicate:resultPredicate];
+//}
 
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSPredicate *resultPredicate = [NSPredicate
-                                    predicateWithFormat:@"SELF contains[cd] %@",
-                                    searchText];
+    NSLog(@"%d", indexPath.row); // you can see selected row number in your console;
     
-    truckSearchResults = [truckArray filteredArrayUsingPredicate:resultPredicate];
+    Truck *truckToPass = truckArray[indexPath.row];
+    
+    SharedTruck *selectedTruck = [SharedTruck makeTruck];
+    selectedTruck->truckName = truckToPass.truckName;
+    selectedTruck->truckBlurb = truckToPass.truckBlurb;
+    selectedTruck->truckSchedule.scheduleStartTime = truckToPass.truckSchedule.scheduleStartTime;
+    selectedTruck->truckSchedule.scheduleEndTime = truckToPass.truckSchedule.scheduleEndTime;
+    selectedTruck->truckSchedule.scheduleLocation = truckToPass.truckSchedule.scheduleLocation;
+//    NSLog(@"\n"
+//          "Shared Truck info is:"
+//          "\n   name: %@"
+//          "\n   blub: %@"
+//          "\n   schedule start: %@"
+//          "\n   schedule end: %@"
+//          "\n   schedule location: %@",
+//          selectedTruck->truckName, selectedTruck->truckBlurb, selectedTruck->truckSchedule.scheduleStartTime, selectedTruck->truckSchedule.scheduleEndTime, selectedTruck->truckSchedule.scheduleLocation);
 }
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"ScheduleSegue"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        ScheduleViewController *destViewController = segue.destinationViewController;
-        destViewController.truckPassedSchedule = [truckArray objectAtIndex:indexPath.row];
-        
-    } else if ([segue.identifier isEqualToString:@"MenuSegue"]){
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        MenuViewController *destViewController = segue.destinationViewController;
-        destViewController.truckPassedMenu = [truckArray objectAtIndex:indexPath.row];
-    } else if ([segue.identifier isEqualToString:@"AboutSegue"]){
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        AboutViewController *destViewController = segue.destinationViewController;
-        destViewController.truckPassedAbout = [truckArray objectAtIndex:indexPath.row];
-    }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    //Truck *truckToPass = truckArray[indexPath.row];
+    //AboutViewController *aboutVC = segue.destinationViewController;
+    //aboutVC.truckPassed = truckToPass;
 }
 
 @end
