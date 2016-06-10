@@ -12,7 +12,7 @@
 @interface SharedTruck : NSObject
 {
     @public
-    NSString *initTruckWithName;
+    NSString *truckName;
     NSString *andTruckBlurb;
     UIImage *andTruckMenu;
     TruckSchedule *andTruckSchedule;

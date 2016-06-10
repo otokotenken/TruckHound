@@ -87,19 +87,15 @@ NSArray *truckSearchResults;
     NSLog(@"%ld", (long)indexPath.row); // you can see selected row number in your console;
     Truck *truckToPass = truckArray[indexPath.row];
     SharedTruck *selectedTruck = [SharedTruck makeTruck];
+    selectedTruck->truckName = truckToPass.truckName;
     selectedTruck->andTruckMenu = truckToPass.truckMenu;
     selectedTruck->andTruckBlurb = truckToPass.truckBlurb;
     selectedTruck->andTruckSchedule.scheduleStartTime = truckToPass.truckSchedule.scheduleStartTime;
     selectedTruck->andTruckSchedule.scheduleEndTime = truckToPass.truckSchedule.scheduleEndTime;
     selectedTruck->andTruckSchedule.scheduleLocation = truckToPass.truckSchedule.scheduleLocation;
-//    NSLog(@"\n"
-//          "Shared Truck info is:"
-//          "\n   name: %@"
-//          "\n   blub: %@"
-//          "\n   schedule start: %@"
-//          "\n   schedule end: %@"
-//          "\n   schedule location: %@",
-//          selectedTruck->truckName, selectedTruck->truckBlurb, selectedTruck->truckSchedule.scheduleStartTime, selectedTruck->truckSchedule.scheduleEndTime, selectedTruck->truckSchedule.scheduleLocation);
+
+    _checkedCell = indexPath;
+    [tableView reloadData];
 }
 
 #pragma mark - Navigation
