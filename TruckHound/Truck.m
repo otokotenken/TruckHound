@@ -10,13 +10,6 @@
 
 @implementation Truck
 
-
-//- (void)setTruckName:(NSString *)name
-//{
-//    self.truckName = name;
-//    NSLog(@"setTruckName method was called and truck name is: %@", self.truckName);
-//};
-
 -(Truck *)initTruck:(NSString *)truckName :(NSString *)truckBlurb :(UIImage *)truckMenu :(TruckSchedule *)truckSchedule
 {
     self.truckName = truckName;

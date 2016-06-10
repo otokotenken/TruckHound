@@ -17,11 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self displayDetails];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)displayDetails {
+   // NSLog(@"in Menu's displayDetails method");
+
+    _menuImage.image = _truckPassed.truckMenu;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self displayDetails];
 }
 
 /*
