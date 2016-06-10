@@ -5,7 +5,9 @@
 //  Created by DetroitLabs on 6/8/16.
 //  Copyright © 2016 DetroitLabs. All rights reserved.
 //
-
+#import "ListTVC.h"
+#import "Truck.h"
+#import "SharedTruck.h"
 #import "AboutViewController.h"
 
 @interface AboutViewController ()
@@ -17,8 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self displayTruckDetails];
+    [self displayDetails];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,9 +27,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)displayTruckDetails {
-    _aboutTitleLabel.text = _truckPassedAbout.truckName;
-    _aboutBlurbLabel.text = _truckPassedAbout.truckBlurb;
+- (void)displayDetails {
+    SharedTruck *selectedTruck = [SharedTruck makeTruck];
+    _aboutTitleLabel.text = selectedTruck->truckName;
+    _aboutBlurbLabel.text = selectedTruck->truckBlurb;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self displayDetails];
 }
 
 /*

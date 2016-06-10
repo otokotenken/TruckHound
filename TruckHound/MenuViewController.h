@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Truck.h"
+#import "SharedTruck.h"
 
 @interface MenuViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *menuImage;
-@property Truck *truckPassedMenu;
+@property Truck *truckPassed;
+
 @end
