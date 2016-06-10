@@ -21,6 +21,7 @@ static SharedTruck *sharedTruck = nil;    // static instance variable
     return sharedTruck;
 }
 
+
 - (id)init
 {
     if ( (self = [super init]) )

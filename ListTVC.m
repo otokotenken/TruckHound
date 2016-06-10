@@ -78,8 +78,6 @@ NSArray *truckSearchResults;
     Truck *currentTruck = truckArray[i];
     
     NSString *nameString = currentTruck.truckName;
-    
-    // Configure the cell...
     cell.textLabel.text = nameString;
     return cell;
 }
