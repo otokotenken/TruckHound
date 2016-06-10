@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="W8g-qm-ZHZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="W8g-qm-ZHZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Lists-->
@@ -46,20 +47,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jav-jm-S71">
-                                <rect key="frame" x="139" y="130" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MW-YF-7Q4">
+                                <rect key="frame" x="40" y="244" width="241" height="253"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MW-YF-7Q4">
-                                <rect key="frame" x="40" y="244" width="241" height="183"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jav-jm-S71">
+                                <rect key="frame" x="20" y="72" width="280" height="79"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="31"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jav-jm-S71" firstAttribute="centerX" secondItem="ucN-Pz-egf" secondAttribute="centerX" id="25n-S7-msf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2MW-YF-7Q4" secondAttribute="trailing" constant="19" id="oh1-Pj-gfH"/>
+                            <constraint firstItem="2MW-YF-7Q4" firstAttribute="leading" secondItem="ucN-Pz-egf" secondAttribute="leadingMargin" constant="20" id="w80-ND-KF4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="MYv-YK-m3I"/>
                     <connections>
@@ -110,21 +116,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j7-ON-taH">
-                                <rect key="frame" x="20" y="155" width="280" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j7-ON-taH">
+                                <rect key="frame" x="20" y="177" width="280" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kr-ul-Ljr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kr-ul-Ljr">
                                 <rect key="frame" x="20" y="89" width="280" height="64"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-ZU-XwE">
-                                <rect key="frame" x="20" y="236" width="280" height="124"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-ZU-XwE">
+                                <rect key="frame" x="20" y="264" width="280" height="124"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -167,7 +173,7 @@
         <scene sceneID="rys-Jo-2sG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ht3-Sn-Seo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="qVr-bw-APL"/>
+                    <tabBarItem key="tabBarItem" title="List" image="ListIcon" id="qVr-bw-APL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sKM-7N-VBE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -186,7 +192,7 @@
         <scene sceneID="eMi-80-V3A">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="26q-Vm-Ma2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="Bii-mA-JHf"/>
+                    <tabBarItem key="tabBarItem" title="About" image="AboutIcon" id="Bii-mA-JHf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="twX-M3-YMx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -205,7 +211,7 @@
         <scene sceneID="eIg-VO-2mT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DRD-xQ-5SE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" id="2vJ-Pz-X18"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="ScheduleIcon" id="2vJ-Pz-X18"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2lJ-7v-bK7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -224,7 +230,7 @@
         <scene sceneID="6YY-EZ-203">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rcl-0G-0xt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menu" id="Htn-WO-Sgn"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="MenuIcon" id="Htn-WO-Sgn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lpK-QN-yo4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -240,4 +246,10 @@
             <point key="canvasLocation" x="1483" y="-374"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AboutIcon" width="27" height="26"/>
+        <image name="ListIcon" width="18" height="18"/>
+        <image name="MenuIcon" width="26" height="23"/>
+        <image name="ScheduleIcon" width="25" height="25"/>
+    </resources>
 </document>
