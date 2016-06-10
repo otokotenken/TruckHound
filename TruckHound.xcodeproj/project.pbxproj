@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43A8D8781D08FB5600E1A3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A8D8771D08FB5600E1A3AC /* Assets.xcassets */; };
+		43CCC8911D0B581000CFC786 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCC8901D0B581000CFC786 /* MapKit.framework */; };
 		43DFA8FA1D089A470088BAC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA8F91D089A470088BAC2 /* main.m */; };
 		43DFA8FD1D089A470088BAC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA8FC1D089A470088BAC2 /* AppDelegate.m */; };
 		43DFA9031D089A470088BAC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43DFA9011D089A470088BAC2 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		43A8D8771D08FB5600E1A3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = TruckHound/Assets.xcassets; sourceTree = "<group>"; };
+		43CCC8901D0B581000CFC786 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		43DFA8F51D089A470088BAC2 /* TruckHound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckHound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DFA8F91D089A470088BAC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43DFA8FB1D089A470088BAC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43CCC8911D0B581000CFC786 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		43DFA8EC1D089A470088BAC2 = {
 			isa = PBXGroup;
 			children = (
+				43CCC8901D0B581000CFC786 /* MapKit.framework */,
 				43A8D8771D08FB5600E1A3AC /* Assets.xcassets */,
 				43DFA8F71D089A470088BAC2 /* TruckHound */,
 				43DFA8F61D089A470088BAC2 /* Products */,

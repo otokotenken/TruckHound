@@ -46,7 +46,7 @@
     
         _scheduleStartTimeLabel.text = startTime;
         _scheduleEndTimeLabel.text = endTime;
-        _scheduleLocationLabel.text = selectedTruck->truckSchedule.scheduleLocation;
+        _scheduleLocationLabel.text = selectedTruck->andTruckSchedule.scheduleLocation;
 }
 
 - (void)viewDidAppear:(BOOL)animated

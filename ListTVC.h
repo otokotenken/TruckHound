@@ -11,7 +11,7 @@
 #import "SharedTruck.h"
 
 @interface ListTVC : UITableViewController
-@property (weak, nonatomic) NSIndexPath *checkedCell;
+@property (strong, nonatomic) NSIndexPath *checkedCell;
 
 
 @end

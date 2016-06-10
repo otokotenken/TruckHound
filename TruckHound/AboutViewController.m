@@ -29,7 +29,7 @@
 
 - (void)displayDetails {
     SharedTruck *selectedTruck = [SharedTruck makeTruck];
-    _aboutTitleLabel.text = selectedTruck->initTruckWithName;
+    _aboutTitleLabel.text = selectedTruck->truckName;
     _aboutBlurbLabel.text = selectedTruck->andTruckBlurb;
 }
 
