@@ -33,22 +33,20 @@
     SharedTruck *selectedTruck = [SharedTruck makeTruck];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy"];
-        [dateFormatter setDateFormat:@"MM"];
-        [dateFormatter setDateFormat:@"dd"];
-        [dateFormatter setDateFormat:@"HH"];
-        [dateFormatter setDateFormat:@"mm"];
-        [dateFormatter setDateFormat:@"ss"];
+        [dateFormatter setDateFormat:@"EEE MM-dd-yyyy HH:mm"];
+//        [dateFormatter setDateFormat:@"MM"];
+//        [dateFormatter setDateFormat:@"dd"];
+//        [dateFormatter setDateFormat:@"HH"];
+//        [dateFormatter setDateFormat:@"mm"];
+//        [dateFormatter setDateFormat:@"ss"];
     
-    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->andTruckSchedule.scheduleStartTime];
+    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->truckSchedule.scheduleStartTime];
+    NSString *endTime = @"Fri 06-10-2016 06:00";
+//    NSString *endTime = [dateFormatter stringFromDate:selectedTruck->truckSchedule.scheduleEndTime];
     
-    NSString *endTime = [dateFormatter stringFromDate:selectedTruck->andTruckSchedule.scheduleEndTime];
-    
-    _scheduleStartTimeLabel.text = startTime;
-    
-    _scheduleEndTimeLabel.text = endTime;
-    
-    _scheduleLocationLabel.text = selectedTruck->andTruckSchedule.scheduleLocation;
+        _scheduleStartTimeLabel.text = startTime;
+        _scheduleEndTimeLabel.text = endTime;
+        _scheduleLocationLabel.text = selectedTruck->truckSchedule.scheduleLocation;
 }
 
 - (void)viewDidAppear:(BOOL)animated
