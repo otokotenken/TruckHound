@@ -22,13 +22,6 @@ NSArray *truckSearchResults;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     [self initializeTrucks];
 }
 
@@ -57,7 +50,6 @@ NSArray *truckSearchResults;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -72,105 +64,38 @@ NSArray *truckSearchResults;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellJL" forIndexPath:indexPath];
-    
-    int i = indexPath.row;
+   int i = indexPath.row;
     
     Truck *currentTruck = truckArray[i];
     
     NSString *nameString = currentTruck.truckName;
     cell.textLabel.text = nameString;
+        if (_checkedCell == indexPath) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
     return cell;
 }
-//
-//- (IBAction)myUnwindAction:(UIStoryboardSegue*)unwindSegue
-//{
-//    NSLog(@"unwind is being called!");
-//}
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-//-(BOOL)searchDisplayController:(UISearchController *)controller
-//shouldReloadTableForSearchString:(NSString *)searchString
-//{
-//    [self filterContentForSearchText:searchString
-//                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-//                                      objectAtIndex:[self.searchDisplayController.searchBar
-//                                                     selectedScopeButtonIndex]]];
-//    
-//    return YES;
-//}
-//
-//- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-//{
-//    NSPredicate *resultPredicate = [NSPredicate
-//                                    predicateWithFormat:@"SELF contains[cd] %@",
-//                                    searchText];
-//    
-//    truckSearchResults = [truckArray filteredArrayUsingPredicate:resultPredicate];
-//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%d", indexPath.row); // you can see selected row number in your console;
-    
+    NSLog(@"%ld", (long)indexPath.row); // you can see selected row number in your console;
     Truck *truckToPass = truckArray[indexPath.row];
-    
     SharedTruck *selectedTruck = [SharedTruck makeTruck];
-    selectedTruck->truckName = truckToPass.truckName;
-    selectedTruck->truckBlurb = truckToPass.truckBlurb;
-    selectedTruck->truckSchedule.scheduleStartTime = truckToPass.truckSchedule.scheduleStartTime;
-    selectedTruck->truckSchedule.scheduleEndTime = truckToPass.truckSchedule.scheduleEndTime;
-    selectedTruck->truckSchedule.scheduleLocation = truckToPass.truckSchedule.scheduleLocation;
-//    NSLog(@"\n"
-//          "Shared Truck info is:"
-//          "\n   name: %@"
-//          "\n   blub: %@"
-//          "\n   schedule start: %@"
-//          "\n   schedule end: %@"
-//          "\n   schedule location: %@",
-//          selectedTruck->truckName, selectedTruck->truckBlurb, selectedTruck->truckSchedule.scheduleStartTime, selectedTruck->truckSchedule.scheduleEndTime, selectedTruck->truckSchedule.scheduleLocation);
+        selectedTruck->truckName = truckToPass.truckName;
+        selectedTruck->truckBlurb = truckToPass.truckBlurb;
+        selectedTruck->truckSchedule.scheduleStartTime = truckToPass.truckSchedule.scheduleStartTime;
+        selectedTruck->truckSchedule.scheduleEndTime = truckToPass.truckSchedule.scheduleEndTime;
+        selectedTruck->truckSchedule.scheduleLocation = truckToPass.truckSchedule.scheduleLocation;
+    _checkedCell = indexPath;
+    [tableView reloadData];
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    
-    //Truck *truckToPass = truckArray[indexPath.row];
-    //AboutViewController *aboutVC = segue.destinationViewController;
-    //aboutVC.truckPassed = truckToPass;
-}
+{ }
 
 @end
