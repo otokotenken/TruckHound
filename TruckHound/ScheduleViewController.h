@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Truck.h"
 #import "SharedTruck.h"
+#import <MapKit/MapKit.h>
+
 
 @interface ScheduleViewController : UIViewController
 

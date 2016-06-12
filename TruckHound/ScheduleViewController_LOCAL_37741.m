@@ -35,21 +35,36 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"EEE MM-dd-yyyy HH:mm"];
     
-    NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
-    [dateFormatter2 setDateFormat:@"EEE MM-dd-yyyy 05:00"];
+    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->truckSchedule.scheduleStartTime];
     
-    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->andTruckSchedule.scheduleStartTime];
-//    NSString *endTime = @"EEE MM-dd-yyyy 06:00";
-    NSString *endTime = [dateFormatter2 stringFromDate:selectedTruck->andTruckSchedule.scheduleEndTime];
+    NSString *endTime = @"Fri 06-10-2016 06:00";
+
     
-        _scheduleStartTimeLabel.text = startTime;
-        _scheduleEndTimeLabel.text = endTime;
-        _scheduleLocationLabel.text = selectedTruck->andTruckSchedule.scheduleLocation;
+
+
+    
+    
+    _scheduleStartTimeLabel.text = startTime;
+    _scheduleEndTimeLabel.text = endTime;
+    _scheduleLocationLabel.text = selectedTruck->truckSchedule.scheduleLocation;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [self displayDetails];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    // 1
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 42.365842;
+    zoomLocation.longitude= -83.072642;
+
+    // 2... zoom approximately 1/2 mile radius but sent in meeters
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
+    
+    // 3
+    [_theSpot setRegion:viewRegion animated:YES];
 }
 
 /*
