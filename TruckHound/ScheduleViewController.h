@@ -19,6 +19,6 @@
 
 @property Truck *truckPassed;
 
-@property (weak, nonatomic) IBOutlet MKMapView *theSpot;
+@property (strong, nonatomic) IBOutlet MKMapView *theSpot;
 
 @end
