@@ -61,7 +61,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				43CCC8911D0B581000CFC786 /* MapKit.framework in Frameworks */,
+=======
 				874945F81D0B302E008A302B /* MapKit.framework in Frameworks */,
+>>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +75,11 @@
 		43DFA8EC1D089A470088BAC2 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				43CCC8901D0B581000CFC786 /* MapKit.framework */,
+=======
+				874945F71D0B302E008A302B /* MapKit.framework */,
+>>>>>>> master
 				43A8D8771D08FB5600E1A3AC /* Assets.xcassets */,
 				43DFA8F71D089A470088BAC2 /* TruckHound */,
 				43DFA8F61D089A470088BAC2 /* Products */,

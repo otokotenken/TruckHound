@@ -35,16 +35,28 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"EEE MM-dd-yyyy HH:mm"];
     
-    NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
-    [dateFormatter2 setDateFormat:@"EEE MM-dd-yyyy 05:00"];
+<<<<<<< HEAD
+    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->truckSchedule.scheduleStartTime];
     
+=======
     NSString *startTime = [dateFormatter stringFromDate:selectedTruck->andTruckSchedule.scheduleStartTime];
-//    NSString *endTime = @"EEE MM-dd-yyyy 06:00";
-    NSString *endTime = [dateFormatter2 stringFromDate:selectedTruck->andTruckSchedule.scheduleEndTime];
+>>>>>>> master
+    NSString *endTime = @"Fri 06-10-2016 06:00";
+
     
+
+
+    
+<<<<<<< HEAD
+    
+    _scheduleStartTimeLabel.text = startTime;
+    _scheduleEndTimeLabel.text = endTime;
+    _scheduleLocationLabel.text = selectedTruck->truckSchedule.scheduleLocation;
+=======
         _scheduleStartTimeLabel.text = startTime;
         _scheduleEndTimeLabel.text = endTime;
         _scheduleLocationLabel.text = selectedTruck->andTruckSchedule.scheduleLocation;
+>>>>>>> master
 }
 
 - (void)viewDidAppear:(BOOL)animated
