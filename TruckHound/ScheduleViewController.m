@@ -40,13 +40,9 @@
     NSString *endTime = @"Fri 06-10-2016 06:00";
 
     
-
-
-    
-    
-    _scheduleStartTimeLabel.text = startTime;
-    _scheduleEndTimeLabel.text = endTime;
-    _scheduleLocationLabel.text = selectedTruck->truckSchedule.scheduleLocation;
+        _scheduleStartTimeLabel.text = startTime;
+        _scheduleEndTimeLabel.text = endTime;
+        _scheduleLocationLabel.text = selectedTruck->andTruckSchedule.scheduleLocation;
 }
 
 - (void)viewDidAppear:(BOOL)animated
