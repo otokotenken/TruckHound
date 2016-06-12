@@ -39,10 +39,12 @@
 //        [dateFormatter setDateFormat:@"HH"];
 //        [dateFormatter setDateFormat:@"mm"];
 //        [dateFormatter setDateFormat:@"ss"];
+    NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
+    [dateFormatter2 setDateFormat:@"EEE MM-dd-yyyy 05:00"];
     
     NSString *startTime = [dateFormatter stringFromDate:selectedTruck->andTruckSchedule.scheduleStartTime];
-    NSString *endTime = @"Fri 06-10-2016 06:00";
-//    NSString *endTime = [dateFormatter stringFromDate:selectedTruck->truckSchedule.scheduleEndTime];
+//    NSString *endTime = @"EEE MM-dd-yyyy 06:00";
+    NSString *endTime = [dateFormatter2 stringFromDate:selectedTruck->andTruckSchedule.scheduleEndTime];
     
         _scheduleStartTimeLabel.text = startTime;
         _scheduleEndTimeLabel.text = endTime;

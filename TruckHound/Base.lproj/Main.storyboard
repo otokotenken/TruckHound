@@ -60,7 +60,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87757211923599243" green="0.9332737922668457" blue="0.68702948093414307" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Jav-jm-S71" firstAttribute="centerX" secondItem="ucN-Pz-egf" secondAttribute="centerX" id="25n-S7-msf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2MW-YF-7Q4" secondAttribute="trailing" constant="19" id="oh1-Pj-gfH"/>
@@ -89,11 +89,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wrr-ek-Q94">
-                                <rect key="frame" x="20" y="109" width="280" height="294"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wrr-ek-Q94">
+                                <rect key="frame" x="20" y="72" width="280" height="439"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.86274509803921573" blue="0.7686274509803922" alpha="0.97777478448275867" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wrr-ek-Q94" firstAttribute="trailing" secondItem="R4h-K8-Fmv" secondAttribute="trailingMargin" id="88R-0T-wnZ"/>
+                            <constraint firstItem="wrr-ek-Q94" firstAttribute="top" secondItem="OPG-k4-vNP" secondAttribute="bottom" constant="8" id="beS-Uq-MH8"/>
+                            <constraint firstItem="SnL-YJ-TBD" firstAttribute="top" secondItem="wrr-ek-Q94" secondAttribute="bottom" constant="8" id="eXx-bk-mZM"/>
+                            <constraint firstItem="wrr-ek-Q94" firstAttribute="centerY" secondItem="R4h-K8-Fmv" secondAttribute="centerY" id="qIR-KO-gPu"/>
+                            <constraint firstItem="wrr-ek-Q94" firstAttribute="leading" secondItem="R4h-K8-Fmv" secondAttribute="leadingMargin" id="qdo-Fa-TjD"/>
+                            <constraint firstItem="wrr-ek-Q94" firstAttribute="centerX" secondItem="R4h-K8-Fmv" secondAttribute="centerX" id="xkd-3O-laS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="1HO-if-RI1"/>
                     <connections>
@@ -147,7 +155,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.6783415675163269" green="0.93119567632675171" blue="0.87871748208999634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="VOi-PF-PDg"/>
                     <connections>
@@ -163,7 +171,7 @@
         <!--Item-->
         <scene sceneID="yv9-Bq-4sm">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="W8g-qm-ZHZ" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="W8g-qm-ZHZ" customClass="MainTabViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="aDa-h5-0Hr"/>
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Ok7-Gq-Pi3">
@@ -190,6 +198,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sKM-7N-VBE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Italic" family="Trebuchet MS" pointSize="31"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -209,7 +221,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="twX-M3-YMx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -229,6 +241,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2lJ-7v-bK7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -248,6 +261,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lpK-QN-yo4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

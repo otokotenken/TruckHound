@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		43A8D8781D08FB5600E1A3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A8D8771D08FB5600E1A3AC /* Assets.xcassets */; };
 		43CCC8911D0B581000CFC786 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCC8901D0B581000CFC786 /* MapKit.framework */; };
+		43CCC8941D0DD5DC00CFC786 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CCC8931D0DD5DC00CFC786 /* MainTabViewController.m */; };
 		43DFA8FA1D089A470088BAC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA8F91D089A470088BAC2 /* main.m */; };
 		43DFA8FD1D089A470088BAC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DFA8FC1D089A470088BAC2 /* AppDelegate.m */; };
 		43DFA9031D089A470088BAC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43DFA9011D089A470088BAC2 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		43A8D8771D08FB5600E1A3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = TruckHound/Assets.xcassets; sourceTree = "<group>"; };
 		43CCC8901D0B581000CFC786 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		43CCC8921D0DD5DC00CFC786 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
+		43CCC8931D0DD5DC00CFC786 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
 		43DFA8F51D089A470088BAC2 /* TruckHound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckHound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DFA8F91D089A470088BAC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43DFA8FB1D089A470088BAC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				43DFA9011D089A470088BAC2 /* Main.storyboard */,
+				43CCC8921D0DD5DC00CFC786 /* MainTabViewController.h */,
+				43CCC8931D0DD5DC00CFC786 /* MainTabViewController.m */,
 				87389CC01D08AF480048FEA5 /* Classes */,
 				87389CEE1D0A2B890048FEA5 /* View Controllers */,
 				43DFA8F81D089A470088BAC2 /* Supporting Files */,
@@ -229,6 +234,7 @@
 				43DFA8FD1D089A470088BAC2 /* AppDelegate.m in Sources */,
 				43DFA9141D089D0C0088BAC2 /* AboutViewController.m in Sources */,
 				43DFA8FA1D089A470088BAC2 /* main.m in Sources */,
+				43CCC8941D0DD5DC00CFC786 /* MainTabViewController.m in Sources */,
 				43DFA9171D089D5E0088BAC2 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
