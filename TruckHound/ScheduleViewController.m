@@ -51,12 +51,21 @@
 {
     [self displayDetails];
 }
+//-(void)setMapLocation {
+//    MKCoordinateRegion newRegion;
+//    newRegion.center.latitude = _event.location.latitude;
+//    newRegion.center.longitude = _event.location.longitude;
+//    newRegion.span.latitudeDelta = 0.005;
+//    newRegion.span.longitudeDelta = 0.005;
+//    
+//    [self.mapView setRegion:newRegion animated:YES];
 
+//}
 - (void)viewWillAppear:(BOOL)animated {
     // 1
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 42.365842;
-    zoomLocation.longitude= -83.072642;
+    zoomLocation.latitude = 42.3650097;
+    zoomLocation.longitude= -83.0751844;
 
     // 2... zoom approximately 1/2 mile radius but sent in meeters
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
@@ -64,7 +73,7 @@
     // 3
     [_theSpot setRegion:viewRegion animated:YES];
 }
-
+// @42.3650097,-83.0751844
 /*
 #pragma mark - Navigation
 
