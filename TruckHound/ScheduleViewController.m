@@ -35,7 +35,7 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"EEE MM-dd-yyyy HH:mm"];
     
-    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->truckSchedule.scheduleStartTime];
+    NSString *startTime = [dateFormatter stringFromDate:selectedTruck->andTruckSchedule.scheduleStartTime];
     
     NSString *endTime = @"Fri 06-10-2016 06:00";
 
