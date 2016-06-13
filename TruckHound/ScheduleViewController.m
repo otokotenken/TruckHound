@@ -65,13 +65,21 @@
     // 1
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = 42.3650097;
-    zoomLocation.longitude= -83.0751844;
+    zoomLocation.longitude= -83.0729957;
 
     // 2... zoom approximately 1/2 mile radius but sent in meeters
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
     
     // 3
     [_theSpot setRegion:viewRegion animated:YES];
+    
+    NSString *display_coordinates=[NSString stringWithFormat:@"Latitude is %f and Longitude is %f",zoomLocation.longitude,zoomLocation.latitude];
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:zoomLocation];
+    [annotation setTitle:@"Click Labs"];
+    [annotation setSubtitle:display_coordinates];
+    [_theSpot addAnnotation:annotation];
 }
 // @42.3650097,-83.0751844
 /*
